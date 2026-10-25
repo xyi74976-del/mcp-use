@@ -1,0 +1,14 @@
+BEFORE upstream f877f789: real MCPAgent.streamEvents(), local HTTP fixtures, no external model
+(node:269) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+02:33:11 [mcp-use] warn: No MCP servers defined in config
+{"provider":"openai-compatible","received":"Hello","consumerReturned":true,"upstreamDisconnected":false}
+02:33:12 [mcp-use] warn: No MCP servers defined in config
+{"provider":"ollama","received":"Hello","consumerReturned":true,"upstreamDisconnected":false}
+AFTER cleanup fix: real MCPAgent.streamEvents(), local HTTP fixtures, no external model
+(node:276) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+02:33:12 [mcp-use] warn: No MCP servers defined in config
+{"provider":"openai-compatible","received":"Hello","consumerReturned":true,"upstreamDisconnected":true}
+02:33:12 [mcp-use] warn: No MCP servers defined in config
+{"provider":"ollama","received":"Hello","consumerReturned":true,"upstreamDisconnected":true}
